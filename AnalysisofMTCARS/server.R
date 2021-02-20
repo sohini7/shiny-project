@@ -1,10 +1,11 @@
 library(shiny)
 library(datasets)
+library(rsconnect)
 
 mpgData <- mtcars
 mpgData$am <- factor(mpgData$am, labels = c("Automatic", "Manual"))
 
-shinyServer(function(input, output) {
+server<- Server(function(input, output) {
     
     formulaText <- reactive({
         paste("mpg ~", input$variable)

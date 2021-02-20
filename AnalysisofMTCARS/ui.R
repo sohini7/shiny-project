@@ -1,6 +1,6 @@
 library(shiny)
 
-shinyUI(
+ui<- ui(
     navbarPage("Shiny Application",
                tabPanel("Analysis",
                         fluidPage(
